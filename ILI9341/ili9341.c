@@ -482,7 +482,10 @@ static void ili9341_reset(ili9341_t *lcd)
 
   // ensure both slave lines are open
   ili9341_spi_tft_release(lcd);
-  ili9341_spi_touch_release(lcd);
+  if (lcd->touch_support==itsSupported)
+  {
+      ili9341_spi_touch_release(lcd);
+  }
 }
 
 static void ili9341_initialize(ili9341_t *lcd)
