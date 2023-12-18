@@ -18,6 +18,8 @@ extern "C" {
 #include "stm32l4xx_hal.h"
 #elif defined(STM32F0)
 #include "stm32f0xx_hal.h"
+#elif defined(STM32F1)
+#include "stm32f1xx_hal.h"    
 #elif defined(STM32F4)
 #include "stm32f4xx_hal.h"
 #elif defined(STM32G4)
